@@ -1,0 +1,16 @@
+﻿빌드 시작: 2013-10-23 오후 9:08:37
+     1>2 노드의 "D:\GitHub\NEXT_CPP_Learning\CPP_Learning\UtilProject\UtilProject.vcxproj" 프로젝트(Build 대상)입니다.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\UtilProject.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\UtilProject.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt PrintConsole.cpp
+         PrintConsole.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"D:\GitHub\NEXT_CPP_Learning\CPP_Learning\Debug\UtilProject.lib" /NOLOGO Debug\PrintConsole.obj
+         Debug\stdafx.obj
+         UtilProject.vcxproj -> D:\GitHub\NEXT_CPP_Learning\CPP_Learning\Debug\UtilProject.lib
+     1>"D:\GitHub\NEXT_CPP_Learning\CPP_Learning\UtilProject\UtilProject.vcxproj" 프로젝트를 빌드했습니다(Build 대상).
+
+빌드했습니다.
+
+경과 시간: 00:00:00.60
