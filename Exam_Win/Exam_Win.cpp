@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include "Exam_Win.h"
+#include "PrintConsole.h"
 
 #define MAX_LOADSTRING 100
 

@@ -74,6 +74,7 @@
     <ClInclude Include="PrintConsole.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="UtilProject.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PrintConsole.cpp" />

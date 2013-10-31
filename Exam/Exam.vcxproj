@@ -42,8 +42,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <ReferencePath>D:\GitHub\NEXT_CPP_Learning\CPP_Learning\Debug;$(ReferencePath)</ReferencePath>
-    <LibraryPath>D:\GitHub\NEXT_CPP_Learning\CPP_Learning\Debug;$(LibraryPath)</LibraryPath>
-    <IncludePath>D:\GitHub\NEXT_CPP_Learning\CPP_Learning\UtilProject;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\UtilProject;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
