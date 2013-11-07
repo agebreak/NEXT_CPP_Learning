@@ -27,9 +27,13 @@ public:
 	Position GetPosition() {return m_position;}
 	void	 PrintPosition();
 
+	void		SetName(std::string name) {m_Name = name;}
+	std::string GetName() {return m_Name;}
+
 	Position Move(DIRECTION dir);
 
 protected:
 	Position m_position;	
+	std::string m_Name;
 };
 

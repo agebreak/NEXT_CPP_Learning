@@ -11,13 +11,17 @@ CGameManager::CGameManager(void)
 
 CGameManager::~CGameManager(void)
 {
+
 	delete m_PC;
 }
 
 void CGameManager::Init()
 {
 	printf("[Game Start!!]\n");
-	
+
+	srand( (unsigned)time( NULL ) );
+	CreateMobs();		
+		
 	// 위치 세팅
 	m_PC->SetPosition(5, 5);
 	m_PC->PrintPosition();
@@ -71,4 +75,32 @@ bool CGameManager::InputProc()
 		return false;
 
 	return true;
+}
+
+void CGameManager::CreateMobs()
+{
+	// 문제) 랜덤으로 맵 사이즈의 1/4 만큼의 수의 몹을 배치하라.
+	
+	int mobCount = (MAP_SIZE * MAP_SIZE) / 4;
+
+	while (mobCount > 0)
+	{
+		int x = rand() % MAP_SIZE;
+		int y = rand() % MAP_SIZE;
+
+		MapInfo* pMapInfo = m_Map.GetMapInfo(x, y);
+		if(pMapInfo->pMob == nullptr)
+		{
+			pMapInfo->pMob = new CMob();
+
+			// 이름 세팅
+			char buf[32] = {0,};
+			sprintf_s(buf, "Mob %d", mobCount);
+			pMapInfo->pMob->SetName(buf);
+
+			--mobCount;
+		}
+	}
+
+	printf_s("<< Mob Create Complete! >>\n");
 }
