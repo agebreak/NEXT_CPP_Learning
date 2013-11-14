@@ -4,6 +4,7 @@
 
 
 CCharacter::CCharacter(void)
+	:m_HP(100)
 {
 	m_position.x = m_position.y = 0;
 }
@@ -48,4 +49,24 @@ void CCharacter::SetPosition( int x, int y )
 void CCharacter::PrintPosition()
 {
 	printf_s("[CHAR POS: %d, %d]\n", m_position.x, m_position.y);
+}
+
+void CCharacter::HitCheck(AttackResult result, int damage)
+{
+	switch (result)
+	{
+	case ATTACK_HIT:
+		printf_s("-- %s는 공격에 (%d)의 피해를 입었다.\n", GetName().c_str(), damage);
+		m_HP -= damage;
+		break;
+	case ATTACK_MISS:		// 회피시에는 데미지가 없다.
+		printf_s("-- %s는 공격을 피했다.\n", GetName().c_str());
+		break;
+	case ATTACK_GUARD:
+		printf_s("-- %s는 공격을 막았다. (%d)의 피해만 입었다.\n", GetName().c_str(), damage / 2);
+		m_HP -= damage / 2;
+		break;	
+	default:
+		break;
+	}
 }

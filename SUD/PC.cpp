@@ -2,8 +2,10 @@
 #include "PC.h"
 
 
-CPC::CPC(void)
+CPC::CPC(void)	
 {
+	m_Power = 10;
+	m_Name = "플레이어";
 }
 
 

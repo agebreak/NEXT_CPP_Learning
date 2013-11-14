@@ -1,11 +1,14 @@
 #include "stdafx.h"
 #include "GameManager.h"
+#include <windows.h>
 
+#define POWER_OFFSET 3
 
 
 CGameManager::CGameManager(void)
+	:m_GameState(NORMAL)
 {
-	m_PC = new CPC();
+	m_PC = new CPC();	
 }
 
 
@@ -32,7 +35,7 @@ void CGameManager::Run()
 {
 	while(InputProc())
 	{
-
+		CheckMap();		
 	}
 }
 
@@ -80,21 +83,24 @@ bool CGameManager::InputProc()
 void CGameManager::CreateMobs()
 {
 	// 문제) 랜덤으로 맵 사이즈의 1/4 만큼의 수의 몹을 배치하라.
-	
-	int mobCount = (MAP_SIZE * MAP_SIZE) / 4;
 
+	char buf[32] = {0,};
+
+	int mobCount = (MAP_SIZE * MAP_SIZE) / 4;
 	while (mobCount > 0)
 	{
+		// 랜덤으로 배치할 위치를 결정
 		int x = rand() % MAP_SIZE;
 		int y = rand() % MAP_SIZE;
 
 		MapInfo* pMapInfo = m_Map.GetMapInfo(x, y);
+		
+		// 몹이 없는 자리에만 배치한다 
 		if(pMapInfo->pMob == nullptr)
 		{
-			pMapInfo->pMob = new CMob();
+			pMapInfo->pMob = new CMob();			
 
-			// 이름 세팅
-			char buf[32] = {0,};
+			// 이름 세팅			
 			sprintf_s(buf, "Mob %d", mobCount);
 			pMapInfo->pMob->SetName(buf);
 
@@ -103,4 +109,56 @@ void CGameManager::CreateMobs()
 	}
 
 	printf_s("<< Mob Create Complete! >>\n");
+}
+
+void CGameManager::CheckMap()
+{
+	Position pos = m_PC->GetPosition();
+	MapInfo* pMapInfo = m_Map.GetMapInfo(pos.x, pos.y);
+	if(!pMapInfo)
+		return;
+
+	if(pMapInfo->pMob)
+	{
+		// 몹이 존재한다. 전투를 시작한다.
+		m_GameState = BATTLE;
+		StartBattle(pMapInfo->pMob);
+	}
+}
+
+void CGameManager::StartBattle( CMob* pMob )
+{
+	printf_s("<<<< 몹을 만났습니다. 전투를 시작합니다! >>>\n");
+
+	while (m_PC->IsAlive() && pMob->IsAlive())
+	{
+		// 플레이어 턴
+		printf_s("< 플레이어가 공격 했습니다. >\n");		
+		AttackResult result = (AttackResult)(rand() % ATTACK_COUNT);
+		int damage = m_PC->Power() + (m_PC->Power() % POWER_OFFSET * 2) - POWER_OFFSET;
+		pMob->HitCheck(result, damage);
+
+		if(!m_PC->IsAlive())
+		{
+			printf_s("?????? 플레이어가 사망하였습니다... ????\n");
+			break;
+		}
+
+		// 몬스터 턴
+		printf_s("< 몬스터(%s)가 공격 했습니다. >\n", pMob->GetName().c_str());
+		result = (AttackResult)(rand() % ATTACK_COUNT);
+		damage = pMob->Power() + (m_PC->Power() % POWER_OFFSET * 2) - POWER_OFFSET;
+		m_PC->HitCheck(result, damage);		
+
+		if(!pMob->IsAlive())
+		{
+			printf_s("??? 몬스터(%s)를 쓰러트렸다!!\n", pMob->GetName().c_str());
+			break;
+		}
+
+		Sleep(1000);
+	}
+
+	printf_s("<<<<< 전투가 종료 되었습니다 >>>\n");
+	m_GameState = NORMAL;
 }
