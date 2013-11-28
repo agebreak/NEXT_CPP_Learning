@@ -138,21 +138,21 @@ void CGameManager::StartBattle( CMob* pMob )
 		int damage = m_PC->Power() + (m_PC->Power() % POWER_OFFSET * 2) - POWER_OFFSET;
 		pMob->HitCheck(result, damage);
 
-		if(!m_PC->IsAlive())
+		if(!pMob->IsAlive())
 		{
-			printf_s("?????? 플레이어가 사망하였습니다... ????\n");
+			printf_s("??? 몬스터(%s)를 쓰러트렸다!!\n", pMob->GetName().c_str());
 			break;
 		}
 
 		// 몬스터 턴
 		printf_s("< 몬스터(%s)가 공격 했습니다. >\n", pMob->GetName().c_str());
 		result = (AttackResult)(rand() % ATTACK_COUNT);
-		damage = pMob->Power() + (m_PC->Power() % POWER_OFFSET * 2) - POWER_OFFSET;
+		damage = pMob->Power() + (pMob->Power() % POWER_OFFSET * 2) - POWER_OFFSET;
 		m_PC->HitCheck(result, damage);		
 
-		if(!pMob->IsAlive())
+		if(!m_PC->IsAlive())
 		{
-			printf_s("??? 몬스터(%s)를 쓰러트렸다!!\n", pMob->GetName().c_str());
+			printf_s("?????? 플레이어가 사망하였습니다... ????\n");
 			break;
 		}
 
