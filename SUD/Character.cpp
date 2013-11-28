@@ -19,16 +19,16 @@ Position CCharacter::Move( DIRECTION dir )
 	switch (dir)
 	{
 	case DIR_UP:
-		m_position.y = __max(m_position.y - 1, 0);
+		m_position.y = __min(m_position.y - 1, 0);
 		break;
 	case DIR_DOWN:
-		m_position.y = __min(m_position.y + 1, MAP_SIZE);
+		m_position.y = __max(m_position.y + 1, MAP_SIZE);
 		break;
 	case DIR_LEFT:
-		m_position.x = __max(m_position.x - 1, 0);
+		m_position.x = __min(m_position.x - 1, 0);
 		break;
 	case DIR_RIGHT:
-		m_position.x = __min(m_position.x + 1, MAP_SIZE);
+		m_position.x = __max(m_position.x + 1, MAP_SIZE);
 		break;
 	default:
 		break;
@@ -63,7 +63,7 @@ void CCharacter::HitCheck(AttackResult result, int damage)
 		printf_s("-- %s는 공격을 피했다.\n", GetName().c_str());
 		break;
 	case ATTACK_GUARD:
-		printf_s("-- %s는 공격을 막았다. (%d)의 피해만 입었다.\n", GetName().c_str(), damage / 2);
+		printf_s("-- 는 공격을 막았다. (%d)의 피해만 입었다.\n", GetName().c_str(), damage / 2);
 		m_HP -= damage / 2;
 		break;	
 	default:

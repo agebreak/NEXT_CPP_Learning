@@ -1,7 +1,7 @@
 #pragma once
 #include "character.h"
-class CMob :
-	public CCharacter
+
+class CMob
 {
 public:
 	CMob(void);
