@@ -9,6 +9,13 @@ enum GameState
 	BATTLE,
 };
 
+enum BattleResult
+{
+	BATTLE_WIN,
+	BATTLE_LOSE,
+	BATTLE_NONE,
+};
+
 
 // 게임의 제어를 담당한다
 class CGameManager
@@ -25,7 +32,7 @@ protected:
 	bool InputProc();	// 키보드 입력 처리
 	void CreateMobs();	// 몹을 배치한다
 	void CheckMap();	
-	void StartBattle(CMob* pMob);
+	BattleResult StartBattle(CMob* pMob);
 
 protected:
 	CGameMap	m_Map;

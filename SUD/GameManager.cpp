@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "GameManager.h"
-#include <windows.h>
+
 
 #define POWER_OFFSET 3
 
@@ -14,7 +14,6 @@ CGameManager::CGameManager(void)
 
 CGameManager::~CGameManager(void)
 {
-
 	delete m_PC;
 }
 
@@ -122,13 +121,23 @@ void CGameManager::CheckMap()
 	{
 		// 몹이 존재한다. 전투를 시작한다.
 		m_GameState = BATTLE;
-		StartBattle(pMapInfo->pMob);
+		BattleResult result = StartBattle(pMapInfo->pMob);
+		if(result == BATTLE_WIN)
+		{
+			delete pMapInfo->pMob;
+			pMapInfo->pMob = nullptr;
+		}
 	}
 }
 
-void CGameManager::StartBattle( CMob* pMob )
+BattleResult CGameManager::StartBattle(CMob* pMob)
 {
+	if(!pMob)
+		return BATTLE_NONE;
+
 	printf_s("<<<< 몹을 만났습니다. 전투를 시작합니다! >>>\n");
+
+	BattleResult battleResult;
 
 	while (m_PC->IsAlive() && pMob->IsAlive())
 	{
@@ -141,6 +150,7 @@ void CGameManager::StartBattle( CMob* pMob )
 		if(!pMob->IsAlive())
 		{
 			printf_s("??? 몬스터(%s)를 쓰러트렸다!!\n", pMob->GetName().c_str());
+			battleResult = BATTLE_WIN;			
 			break;
 		}
 
@@ -153,6 +163,7 @@ void CGameManager::StartBattle( CMob* pMob )
 		if(!m_PC->IsAlive())
 		{
 			printf_s("?????? 플레이어가 사망하였습니다... ????\n");
+			battleResult = BATTLE_LOSE;
 			break;
 		}
 
@@ -161,4 +172,6 @@ void CGameManager::StartBattle( CMob* pMob )
 
 	printf_s("<<<<< 전투가 종료 되었습니다 >>>\n");
 	m_GameState = NORMAL;
+
+	return battleResult;
 }
