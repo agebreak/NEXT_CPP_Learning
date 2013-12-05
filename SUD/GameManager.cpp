@@ -8,6 +8,7 @@
 CGameManager::CGameManager(void)
 	:m_GameState(NORMAL)
 {
+	m_PC = new CPC();	
 }
 
 
@@ -31,7 +32,7 @@ void CGameManager::Init()
 
 void CGameManager::Run()
 {
-	while(!InputProc())
+	while(InputProc())
 	{
 		CheckMap();		
 	}
@@ -49,7 +50,7 @@ bool CGameManager::InputProc()
 	std::string strInput;
 	getline(std::cin, strInput);
 
-	printf("Input : %s\n", strInput);	
+	printf("Input : %s\n", strInput.c_str());	
 
 	// 캐릭터 이동 처리 구현
 	if(strInput == "W" || strInput == "w")
@@ -62,7 +63,7 @@ bool CGameManager::InputProc()
 	}
 	else if(strInput == "S" || strInput == "s")
 	{
-		m_PC->move(DIR_DOWN);
+		m_PC->Move(DIR_DOWN);
 	}
 	else if(strInput == "D" || strInput == "d")
 	{
@@ -142,21 +143,20 @@ BattleResult CGameManager::StartBattle(CMob* pMob)
 	{
 		// 플레이어 턴
 		printf_s("< 플레이어가 공격 했습니다. >\n");		
-		AttackResult result = rand() % ATTACK_COUNT;
+		AttackResult result = (AttackResult)(rand() % ATTACK_COUNT);
 		int damage = m_PC->Power() + (m_PC->Power() % POWER_OFFSET * 2) - POWER_OFFSET;
 		pMob->HitCheck(result, damage);
 
 		if(!pMob->IsAlive())
 		{
-			printf_s("??? 몬스터(%s)를 쓰러트렸다!!\n", pMob->GetName());
-			battleResult = BATTLE_WIN;		
-			delete pMob;
+			printf_s("??? 몬스터(%s)를 쓰러트렸다!!\n", pMob->GetName().c_str());
+			battleResult = BATTLE_WIN;			
 			break;
 		}
 
 		// 몬스터 턴
-		printf_s("< 몬스터(%s)가 공격 했습니다. >\n", pMob->GetName());
-		result = rand() % ATTACK_COUNT;
+		printf_s("< 몬스터(%s)가 공격 했습니다. >\n", pMob->GetName().c_str());
+		result = (AttackResult)(rand() % ATTACK_COUNT);
 		damage = pMob->Power() + (pMob->Power() % POWER_OFFSET * 2) - POWER_OFFSET;
 		m_PC->HitCheck(result, damage);		
 
