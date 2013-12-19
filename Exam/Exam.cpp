@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "UtilProject.h"
 #include "Character.h"
+#include "Exam_MemoryLeak.h"
 
 
 // ½Ì±ÛÅæ Å×½ºÆ®
@@ -201,8 +202,11 @@ TestBoo::~TestBoo()
 
 //////////////////////////////////////////////////////////////////////////
 
+
+
 int _tmain(int argc, _TCHAR* argv[])
 {
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	
 	/*TestValue_1();
 	TestValue_1();
@@ -217,7 +221,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	//TestPointer_4();
 
 	//TestReference_1();
-	TestValuePointer();
+	//TestValuePointer();
+
+	Exam_MemoryLeak leak;
+	leak.Run();
 
 	getchar();
 	return 0;

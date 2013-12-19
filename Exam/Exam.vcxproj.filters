@@ -7,10 +7,16 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Character.h" />
+    <ClInclude Include="Mob.h" />
+    <ClInclude Include="Exam_MemoryLeak.h" />
+    <ClInclude Include="Minion.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Exam.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Character.cpp" />
+    <ClCompile Include="Mob.cpp" />
+    <ClCompile Include="Exam_MemoryLeak.cpp" />
+    <ClCompile Include="Minion.cpp" />
   </ItemGroup>
 </Project>
