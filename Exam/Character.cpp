@@ -4,7 +4,7 @@
 
 CCharacter::CCharacter(void)
 {
-	printf_s("Character is Create!! \n");
+	printf_s("Character is Create!! \n");	
 }
 
 CCharacter::CCharacter( const CCharacter& src )
@@ -23,3 +23,9 @@ void CCharacter::PrintHP()
 {
 	printf_s("Character HP : %d\n", m_HP);
 }
+
+void CCharacter::PrintType()
+{
+	printf_s("My Type is CCharacter...\n");
+}
+

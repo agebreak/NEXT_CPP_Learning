@@ -1,18 +1,13 @@
 #pragma once
 #include "character.h"
 
-class CMinion;
-
-class CMob :
+class CNPC :
 	public CCharacter
 {
 public:
-	CMob(void);
-	~CMob(void);
+	CNPC(void);
+	~CNPC(void);
 
 	void PrintType();
-
-protected:
-	CMinion* m_pMinion;
 };
 

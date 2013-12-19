@@ -10,7 +10,9 @@ public:
 	int	 GetHP() {return m_HP;}
 	void PrintHP();
 
+	virtual void PrintType();
+
 protected:
-	int m_HP;
+	int m_HP;	
 };
 

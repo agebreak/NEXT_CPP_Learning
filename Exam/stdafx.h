@@ -7,13 +7,11 @@
 
 #include "targetver.h"
 
+// TODO: 프로그램에 필요한 추가 헤더는 여기에서 참조합니다.
 #include <stdio.h>
 #include <tchar.h>
 #include <crtdbg.h>
-
-
-
-// TODO: 프로그램에 필요한 추가 헤더는 여기에서 참조합니다.
+#include <string>
 
 #ifdef _DEBUG
 #define new new(_CLIENT_BLOCK, __FILE__, __LINE__)

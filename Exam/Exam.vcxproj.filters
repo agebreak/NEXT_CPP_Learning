@@ -6,17 +6,45 @@
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="Character.h" />
-    <ClInclude Include="Mob.h" />
-    <ClInclude Include="Exam_MemoryLeak.h" />
-    <ClInclude Include="Minion.h" />
+    <ClInclude Include="Exam_MemoryLeak.h">
+      <Filter>Example</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Exam_Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Minion.h">
+      <Filter>Exam_Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Mob.h">
+      <Filter>Exam_Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Exam_VirtualMethod.h" />
+    <ClInclude Include="NPC.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Exam.cpp" />
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="Character.cpp" />
-    <ClCompile Include="Mob.cpp" />
-    <ClCompile Include="Exam_MemoryLeak.cpp" />
-    <ClCompile Include="Minion.cpp" />
+    <ClCompile Include="Exam_MemoryLeak.cpp">
+      <Filter>Example</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Exam_Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Minion.cpp">
+      <Filter>Exam_Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Mob.cpp">
+      <Filter>Exam_Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Exam_VirtualMethod.cpp" />
+    <ClCompile Include="NPC.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Example">
+      <UniqueIdentifier>{ccf5ccfc-3823-41e2-b614-ad8fda7337f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exam_Class">
+      <UniqueIdentifier>{769010c7-2b4a-4aec-b6ac-ca52e6de6ce6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

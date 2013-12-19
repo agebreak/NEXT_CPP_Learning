@@ -5,6 +5,7 @@
 #include "UtilProject.h"
 #include "Character.h"
 #include "Exam_MemoryLeak.h"
+#include "Exam_VirtualMethod.h"
 
 
 // ½Ì±ÛÅæ Å×½ºÆ®
@@ -223,8 +224,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	//TestReference_1();
 	//TestValuePointer();
 
-	Exam_MemoryLeak leak;
-	leak.Run();
+// 	Exam_MemoryLeak leak;
+// 	leak.Run();
+
+	Exam_VirtualMethod virtualMethod;
+	virtualMethod.Run();
 
 	getchar();
 	return 0;
