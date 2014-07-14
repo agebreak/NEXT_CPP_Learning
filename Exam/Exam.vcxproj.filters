@@ -38,6 +38,9 @@
     </ClCompile>
     <ClCompile Include="Exam_VirtualMethod.cpp" />
     <ClCompile Include="NPC.cpp" />
+    <ClCompile Include="OutOfIndex.cpp">
+      <Filter>Example</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Example">

@@ -37,11 +37,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PLinCPP", "PLinCPP\PLinCPP.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BattleShip", "BattleShip\BattleShip.vcxproj", "{A4C4D3CB-0873-460F-872B-605E5786EB2F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RandomSelect", "RandomSelect\RandomSelect.vcxproj", "{52933AC5-9BE2-402D-A59E-AF55ED2EFBE8}"
+EndProject
 Global
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
 		Release|Win32 = Release|Win32
@@ -79,6 +77,10 @@ Global
 		{A4C4D3CB-0873-460F-872B-605E5786EB2F}.Debug|Win32.Build.0 = Debug|Win32
 		{A4C4D3CB-0873-460F-872B-605E5786EB2F}.Release|Win32.ActiveCfg = Release|Win32
 		{A4C4D3CB-0873-460F-872B-605E5786EB2F}.Release|Win32.Build.0 = Release|Win32
+		{52933AC5-9BE2-402D-A59E-AF55ED2EFBE8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{52933AC5-9BE2-402D-A59E-AF55ED2EFBE8}.Debug|Win32.Build.0 = Debug|Win32
+		{52933AC5-9BE2-402D-A59E-AF55ED2EFBE8}.Release|Win32.ActiveCfg = Release|Win32
+		{52933AC5-9BE2-402D-A59E-AF55ED2EFBE8}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,11 +88,16 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{902A98D0-1F05-49B6-94FA-853805C51CD7} = {7209B3D1-1F8E-4913-B858-A420F675A69D}
 		{A4C4D3CB-0873-460F-872B-605E5786EB2F} = {7209B3D1-1F8E-4913-B858-A420F675A69D}
+		{52933AC5-9BE2-402D-A59E-AF55ED2EFBE8} = {7209B3D1-1F8E-4913-B858-A420F675A69D}
 		{7DEDFB4C-C119-40F4-AA6D-F23FE44185E2} = {91392BC4-BF19-4E00-9F10-36C65DF902C4}
 		{F443E4F0-98F6-4568-86B3-A63F8E3BE4B6} = {91392BC4-BF19-4E00-9F10-36C65DF902C4}
 		{B95E1A16-93EE-45B2-A1CB-B6B3078840FC} = {4DB7BC26-D87F-48E8-9816-E8E1275494CA}
 		{DEB0FA9B-7183-4688-90BB-8505190B00D7} = {07A3E8CB-FECA-4404-B879-46B14DAF5428}
 		{829AE5A8-6D0E-4836-92D1-9C98AF3760A8} = {07A3E8CB-FECA-4404-B879-46B14DAF5428}
 		{65F1D210-7EC6-4FA9-BAAF-1CC6D1FCC72D} = {8AAA0BF4-51E1-476D-BBF2-DCEB77905222}
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 EndGlobal

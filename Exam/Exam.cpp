@@ -205,32 +205,32 @@ TestBoo::~TestBoo()
 
 
 
-int _tmain(int argc, _TCHAR* argv[])
-{
-	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-	
-	/*TestValue_1();
-	TestValue_1();
-	TestValue_1();*/
-	
-	//TestValue_2();
-
-	//TestValue_4();	
-	//TestPointer_2();
-
-	//TestPointer_3();
-	//TestPointer_4();
-
-	//TestReference_1();
-	//TestValuePointer();
-
-// 	Exam_MemoryLeak leak;
-// 	leak.Run();
-
-	Exam_VirtualMethod virtualMethod;
-	virtualMethod.Run();
-
-	getchar();
-	return 0;
-}
+// int _tmain(int argc, _TCHAR* argv[])
+// {
+// 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+// 	
+// 	/*TestValue_1();
+// 	TestValue_1();
+// 	TestValue_1();*/
+// 	
+// 	//TestValue_2();
+// 
+// 	//TestValue_4();	
+// 	//TestPointer_2();
+// 
+// 	//TestPointer_3();
+// 	//TestPointer_4();
+// 
+// 	//TestReference_1();
+// 	//TestValuePointer();
+// 
+// // 	Exam_MemoryLeak leak;
+// // 	leak.Run();
+// 
+// 	Exam_VirtualMethod virtualMethod;
+// 	virtualMethod.Run();
+// 
+// 	getchar();
+// 	return 0;
+// }
 
