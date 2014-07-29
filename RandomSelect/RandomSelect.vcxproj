@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A4C4D3CB-0873-460F-872B-605E5786EB2F}</ProjectGuid>
+    <ProjectGuid>{52933AC5-9BE2-402D-A59E-AF55ED2EFBE8}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>BattleShip</RootNamespace>
+    <RootNamespace>RandomSelect</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -79,15 +79,11 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Aircraft.h" />
-    <ClInclude Include="Ship.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Aircraft.cpp" />
-    <ClCompile Include="BattleShip.cpp" />
-    <ClCompile Include="Ship.cpp" />
+    <ClCompile Include="RandomSelect.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
