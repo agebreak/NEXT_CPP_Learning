@@ -37,6 +37,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PLinCPP", "PLinCPP\PLinCPP.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BattleShip", "BattleShip\BattleShip.vcxproj", "{A4C4D3CB-0873-460F-872B-605E5786EB2F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6.FlipLearing", "6.FlipLearing\6.FlipLearing.vcxproj", "{91738C39-5547-4514-9CE0-111328DA5B89}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -79,6 +81,10 @@ Global
 		{A4C4D3CB-0873-460F-872B-605E5786EB2F}.Debug|Win32.Build.0 = Debug|Win32
 		{A4C4D3CB-0873-460F-872B-605E5786EB2F}.Release|Win32.ActiveCfg = Release|Win32
 		{A4C4D3CB-0873-460F-872B-605E5786EB2F}.Release|Win32.Build.0 = Release|Win32
+		{91738C39-5547-4514-9CE0-111328DA5B89}.Debug|Win32.ActiveCfg = Debug|Win32
+		{91738C39-5547-4514-9CE0-111328DA5B89}.Debug|Win32.Build.0 = Debug|Win32
+		{91738C39-5547-4514-9CE0-111328DA5B89}.Release|Win32.ActiveCfg = Release|Win32
+		{91738C39-5547-4514-9CE0-111328DA5B89}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
