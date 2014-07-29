@@ -6,12 +6,76 @@
 #include <string>
 #include <time.h>
 #include <Windows.h>
+#include <algorithm>
+#include <random>
 
 std::vector<std::string> members;
 std::vector<std::string> checkMembers;
 
 void PrintMembers()
 {
+
+// 
+// 	// Player
+// 	Player
+// 	{
+// 	private:
+// 		string trueName;
+// 		string nickName;
+// 		string age;
+// 		bool male;
+// 	public:
+// 		string GetName(bool isMale)
+// 		{
+// 			if (isMale)
+// 			{
+// 				return "꺼져!";
+// 			}
+// 			else
+// 			{
+// 				return trueName;
+// 			}
+// 			return trueName;
+// 		}
+// 	}
+// 
+// 	AIPlayer
+// 	{
+// 
+// 	}
+// 
+// 	Rule
+// 	{
+// 		//AIPlayer player;
+// 		string playerName;
+// 
+// 		void SetPlayerName(string name)
+// 		{
+// 			playerName = name;
+// 		}
+// 
+// 		//player.name();
+// 		player.GetName();
+// 
+// 		void Save()
+// 		{
+// // 			saveFile(player.trueName);
+// // 			saveFile(player.nickName);
+// // 			saveFIle(player.age);
+// // 			saveFile(player.male);
+// 			// 이 씨발
+// 			saveFile(playerName);
+// 		}
+// 	}
+// 	sizeof(Rule);
+// 
+// 	// hp가 있다. Map을 가지다. 
+// 
+// 	// Map
+// 	// string ownerName; (o)
+// 	// Player ownder; x
+// 	// Map has Player.name;
+
 	system("cls");
 
 	// 콘솔창에 컬러를 넣기위해 핸들을 가져온다.

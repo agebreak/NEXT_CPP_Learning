@@ -20,10 +20,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	int arrTest1[10];
 	sizeof(arrTest1);
 
-	
-	sizeof(pArr);
-
-	int* pArr = new int[10];
 
 	getchar();
 }
