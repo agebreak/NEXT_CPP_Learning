@@ -16,23 +16,25 @@ struct Position
 };
 
 class Ship
-{
+{	
+public:
+	void AddPosition(Position pos);
+	void AddPosition(char x, char y);
+
+	bool HitCheck(Position pos);
+	int	 GetHP() { return m_Hp; }
+	bool IsDead();
+
+	void Print();
+
 public:
 	Ship();
 	~Ship();
 
-public:
-	void AddPosition(Position pos);
-	bool HitCheck(Position pos);
-	int GetHP() { return m_Hp; }
-	bool IsDead();
-
-	void Print() {};
-
 protected:
-	int m_Hp; // length
-	Position m_Pos[5];
+	int			m_Hp; // length
+	Position	m_Pos[5];
 	std::string m_Name;
-	ShipType m_Type;
+	ShipType	m_Type;
 };
 
