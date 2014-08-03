@@ -31,20 +31,20 @@ int abs(int x)
 	return x;
 }
 
-int _tmain(int argc, _TCHAR* argv[])
-{
-	
-	//Hello(); // 이건 안됨. 
-
-	
-
-	Next::Hello();
-	DongNe::Hello();
-
-	std::abs(3); // std 에서 가져온것
-	abs(5); // 이건 우리중에 누가 만든거다!!! 
-
-	getchar();
-	return 0;
-}
+// int _tmain(int argc, _TCHAR* argv[])
+// {
+// 	
+// 	//Hello(); // 이건 안됨. 
+// 
+// 	
+// 
+// 	Next::Hello();
+// 	DongNe::Hello();
+// 
+// 	std::abs(3); // std 에서 가져온것
+// 	abs(5); // 이건 우리중에 누가 만든거다!!! 
+// 
+// 	getchar();
+// 	return 0;
+// }
 

@@ -1,6 +1,6 @@
 #pragma once
 class CCharacter
-{
+{	
 public:
 	CCharacter(void); // 기본 생성자
 	CCharacter(const CCharacter& src); // 복사 생성자
@@ -12,7 +12,12 @@ public:
 
 	virtual void PrintType();
 
+	void Attack(CCharacter* pTarget);
+
+	void SayMyName(); 
+
 protected:
-	int m_HP;	
+	int m_HP;		
+	std::string m_Name; 
 };
 

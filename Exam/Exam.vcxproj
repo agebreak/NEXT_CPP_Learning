@@ -84,6 +84,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
+    <ClInclude Include="DarkElf.h" />
+    <ClInclude Include="Elf.h" />
+    <ClInclude Include="ExamMain.h" />
     <ClInclude Include="Exam_MemoryLeak.h" />
     <ClInclude Include="Exam_VirtualMethod.h" />
     <ClInclude Include="Minion.h" />
@@ -94,7 +97,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Character.cpp" />
+    <ClCompile Include="DarkElf.cpp" />
+    <ClCompile Include="Elf.cpp" />
     <ClCompile Include="Exam.cpp" />
+    <ClCompile Include="ExamMain.cpp" />
     <ClCompile Include="Exam_MemoryLeak.cpp" />
     <ClCompile Include="Exam_VirtualMethod.cpp" />
     <ClCompile Include="Minion.cpp" />
@@ -110,6 +116,9 @@
     <ProjectReference Include="..\UtilProject\UtilProject.vcxproj">
       <Project>{b95e1a16-93ee-45b2-a1cb-b6b3078840fc}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

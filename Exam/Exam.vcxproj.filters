@@ -18,8 +18,19 @@
     <ClInclude Include="Mob.h">
       <Filter>Exam_Class</Filter>
     </ClInclude>
-    <ClInclude Include="Exam_VirtualMethod.h" />
-    <ClInclude Include="NPC.h" />
+    <ClInclude Include="Elf.h">
+      <Filter>Exam_Class</Filter>
+    </ClInclude>
+    <ClInclude Include="DarkElf.h">
+      <Filter>Exam_Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Exam_VirtualMethod.h">
+      <Filter>Example</Filter>
+    </ClInclude>
+    <ClInclude Include="NPC.h">
+      <Filter>Exam_Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ExamMain.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Exam.cpp" />
@@ -36,11 +47,22 @@
     <ClCompile Include="Mob.cpp">
       <Filter>Exam_Class</Filter>
     </ClCompile>
-    <ClCompile Include="Exam_VirtualMethod.cpp" />
-    <ClCompile Include="NPC.cpp" />
     <ClCompile Include="Namespace.cpp">
       <Filter>Example</Filter>
     </ClCompile>
+    <ClCompile Include="Elf.cpp">
+      <Filter>Exam_Class</Filter>
+    </ClCompile>
+    <ClCompile Include="DarkElf.cpp">
+      <Filter>Exam_Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Exam_VirtualMethod.cpp">
+      <Filter>Example</Filter>
+    </ClCompile>
+    <ClCompile Include="NPC.cpp">
+      <Filter>Exam_Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ExamMain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Example">
@@ -49,5 +71,8 @@
     <Filter Include="Exam_Class">
       <UniqueIdentifier>{769010c7-2b4a-4aec-b6ac-ca52e6de6ce6}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

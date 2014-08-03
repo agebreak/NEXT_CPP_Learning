@@ -4,7 +4,7 @@
 
 CNPC::CNPC(void)
 {
-	printf("NPC is Create!!\n");	
+	//printf("NPC is Create!!\n");	
 }
 
 

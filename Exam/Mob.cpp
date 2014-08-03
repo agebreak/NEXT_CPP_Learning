@@ -5,7 +5,7 @@
 
 CMob::CMob(void)
 {
-	printf("Mob is Create!!\n");
+	//printf("Mob is Create!!\n");
 
 }
 

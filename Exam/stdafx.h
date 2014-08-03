@@ -12,6 +12,9 @@
 #include <tchar.h>
 #include <crtdbg.h>
 #include <string>
+#include <vector>
+#include <list>
+#include <map>
 
 #ifdef _DEBUG
 #define new new(_CLIENT_BLOCK, __FILE__, __LINE__)
