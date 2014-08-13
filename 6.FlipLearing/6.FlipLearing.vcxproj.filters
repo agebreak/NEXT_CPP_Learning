@@ -9,18 +9,23 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="리소스 파일">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="5.Precompiled Header">
+      <UniqueIdentifier>{a3474b8c-166c-4722-b513-3d89c36cc84c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="6. 인라인 함수">
+      <UniqueIdentifier>{47bfc94a-f67d-4610-90da-6244f5ea62b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.샘플 클래스">
+      <UniqueIdentifier>{1b4ce23c-3dba-4bf8-974e-d2985f27c558}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="7. 오버라이딩">
+      <UniqueIdentifier>{d1d4a3c4-db76-493d-985e-ec6ae5dd574f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -33,11 +38,44 @@
     <ClInclude Include="Ship.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="PchA.h">
+      <Filter>5.Precompiled Header</Filter>
+    </ClInclude>
+    <ClInclude Include="PchB.h">
+      <Filter>5.Precompiled Header</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>5.Precompiled Header</Filter>
+    </ClInclude>
+    <ClInclude Include="PchSample.h">
+      <Filter>5.Precompiled Header</Filter>
+    </ClInclude>
+    <ClInclude Include="InlineFunc.h">
+      <Filter>6. 인라인 함수</Filter>
+    </ClInclude>
+    <ClInclude Include="zzzzzzzzzzzzz.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="FlipLearning.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>0.샘플 클래스</Filter>
+    </ClInclude>
+    <ClInclude Include="Mob.h">
+      <Filter>0.샘플 클래스</Filter>
+    </ClInclude>
+    <ClInclude Include="NPC.h">
+      <Filter>0.샘플 클래스</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>0.샘플 클래스</Filter>
+    </ClInclude>
+    <ClInclude Include="Overriding.h">
+      <Filter>7. 오버라이딩</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="6.FlipLearing.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -50,5 +88,41 @@
     <ClCompile Include="Ship.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="PchA.cpp">
+      <Filter>5.Precompiled Header</Filter>
+    </ClCompile>
+    <ClCompile Include="PchB.cpp">
+      <Filter>5.Precompiled Header</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>5.Precompiled Header</Filter>
+    </ClCompile>
+    <ClCompile Include="PchSample.cpp">
+      <Filter>5.Precompiled Header</Filter>
+    </ClCompile>
+    <ClCompile Include="InlineFunc.cpp">
+      <Filter>6. 인라인 함수</Filter>
+    </ClCompile>
+    <ClCompile Include="FlipLearning.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>0.샘플 클래스</Filter>
+    </ClCompile>
+    <ClCompile Include="Mob.cpp">
+      <Filter>0.샘플 클래스</Filter>
+    </ClCompile>
+    <ClCompile Include="NPC.cpp">
+      <Filter>0.샘플 클래스</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>0.샘플 클래스</Filter>
+    </ClCompile>
+    <ClCompile Include="Overriding.cpp">
+      <Filter>7. 오버라이딩</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

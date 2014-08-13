@@ -5,6 +5,7 @@
 #include "FlString.h"
 #include "Ship.h"
 #include "BattleShip.h"
+#include "Overriding.h"
 
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -12,16 +13,19 @@ int _tmain(int argc, _TCHAR* argv[])
 	//FLString flString; 
 	//flString.Test2();
 
-	Ship ship;
+	//Ship ship;
 	//ship.m_HP = 5;
 	//printf_s("HP : %d", ship.m_HP);
 
 	//ship.SetHP(5);
-	ship.Test();
-	printf_s("HP : %d\n", ship.GetHP());
+// 	ship.Test();
+// 	printf_s("HP : %d\n", ship.GetHP());
+// 
+// 	BattleShip battleShip;
+// 	printf_s("BattleShip HP : %d\n", battleShip.GetHP());
 
-	BattleShip battleShip;
-	printf_s("BattleShip HP : %d\n", battleShip.GetHP());
+	Overriding overriding; 
+	overriding.Run();
 
 	getchar();
 	return 0;
