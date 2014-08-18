@@ -15,6 +15,7 @@
 #include <vector>
 #include <list>
 #include <map>
+#include <iostream>
 
 #ifdef _DEBUG
 #define new new(_CLIENT_BLOCK, __FILE__, __LINE__)

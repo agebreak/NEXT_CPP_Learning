@@ -5,6 +5,7 @@
 #include "Elf.h"
 #include "DarkElf.h"
 #include "NPC.h"
+#include "Exam_Float.h"
 
 
 ExamMain::ExamMain()
@@ -46,7 +47,7 @@ void ExamMain::TestPolymorph1()
 // 	{		
 // 		charac.SayMyName();
 // 	}
-
+	/*
 	std::vector<CCharacter*> characters;
 
 	Elf* pElf = new Elf();
@@ -67,4 +68,9 @@ void ExamMain::TestPolymorph1()
 		delete charac;
 	}
 	characters.clear();
+	*/
+
+	Exam_Float examFloat;
+	examFloat.Run();
+	examFloat.Run2();
 }

@@ -5,6 +5,12 @@
 #include "Aircraft.h"
 #include "Player.h"
 
+enum HitType
+{
+	MISS,
+	HIT,
+	DESTORY,
+};
 
 int _tmain(int argc, _TCHAR* argv[])
 { 
@@ -13,6 +19,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	player.PrintShips();
 
 	getchar();
+
+
 
 	return 0;
 }

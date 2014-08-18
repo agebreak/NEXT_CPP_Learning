@@ -87,6 +87,7 @@
     <ClInclude Include="DarkElf.h" />
     <ClInclude Include="Elf.h" />
     <ClInclude Include="ExamMain.h" />
+    <ClInclude Include="Exam_Float.h" />
     <ClInclude Include="Exam_MemoryLeak.h" />
     <ClInclude Include="Exam_VirtualMethod.h" />
     <ClInclude Include="Minion.h" />
@@ -101,6 +102,7 @@
     <ClCompile Include="Elf.cpp" />
     <ClCompile Include="Exam.cpp" />
     <ClCompile Include="ExamMain.cpp" />
+    <ClCompile Include="Exam_Float.cpp" />
     <ClCompile Include="Exam_MemoryLeak.cpp" />
     <ClCompile Include="Exam_VirtualMethod.cpp" />
     <ClCompile Include="Minion.cpp" />
