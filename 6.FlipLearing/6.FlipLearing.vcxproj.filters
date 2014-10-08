@@ -1,14 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="소스 파일">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="헤더 파일">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="5.Precompiled Header">
       <UniqueIdentifier>{a3474b8c-166c-4722-b513-3d89c36cc84c}</UniqueIdentifier>
     </Filter>
@@ -21,23 +13,17 @@
     <Filter Include="7. 오버라이딩">
       <UniqueIdentifier>{d1d4a3c4-db76-493d-985e-ec6ae5dd574f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="10. Assert">
+      <UniqueIdentifier>{e69071ea-9ded-4b57-bbbe-983fe7e9d495}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="11. Memory Leak">
+      <UniqueIdentifier>{125a1746-e7e9-496f-ab22-19340514fc20}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="targetver.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="FLString.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="BattleShip.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Ship.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="PchA.h">
       <Filter>5.Precompiled Header</Filter>
     </ClInclude>
@@ -52,12 +38,6 @@
     </ClInclude>
     <ClInclude Include="InlineFunc.h">
       <Filter>6. 인라인 함수</Filter>
-    </ClInclude>
-    <ClInclude Include="zzzzzzzzzzzzz.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="FlipLearning.h">
-      <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Character.h">
       <Filter>0.샘플 클래스</Filter>
@@ -74,20 +54,22 @@
     <ClInclude Include="Overriding.h">
       <Filter>7. 오버라이딩</Filter>
     </ClInclude>
+    <ClInclude Include="AbstractClass.h">
+      <Filter>7. 오버라이딩</Filter>
+    </ClInclude>
+    <ClInclude Include="Assert.h">
+      <Filter>10. Assert</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleShip.h" />
+    <ClInclude Include="FlipLearning.h" />
+    <ClInclude Include="FLString.h" />
+    <ClInclude Include="Ship.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="MemoryLeak.h">
+      <Filter>11. Memory Leak</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="6.FlipLearing.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="FLString.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="BattleShip.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Ship.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="PchA.cpp">
       <Filter>5.Precompiled Header</Filter>
     </ClCompile>
@@ -103,9 +85,6 @@
     <ClCompile Include="InlineFunc.cpp">
       <Filter>6. 인라인 함수</Filter>
     </ClCompile>
-    <ClCompile Include="FlipLearning.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Character.cpp">
       <Filter>0.샘플 클래스</Filter>
     </ClCompile>
@@ -120,6 +99,17 @@
     </ClCompile>
     <ClCompile Include="Overriding.cpp">
       <Filter>7. 오버라이딩</Filter>
+    </ClCompile>
+    <ClCompile Include="Assert.cpp">
+      <Filter>10. Assert</Filter>
+    </ClCompile>
+    <ClCompile Include="6.FlipLearing.cpp" />
+    <ClCompile Include="BattleShip.cpp" />
+    <ClCompile Include="FlipLearning.cpp" />
+    <ClCompile Include="FLString.cpp" />
+    <ClCompile Include="Ship.cpp" />
+    <ClCompile Include="MemoryLeak.cpp">
+      <Filter>11. Memory Leak</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

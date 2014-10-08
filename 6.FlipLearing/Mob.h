@@ -7,6 +7,7 @@ public:
 	Mob();
 	~Mob();
 
-	void Dead();
+	// 오버라이딩 안함
+	 //void Dead();
 };
 

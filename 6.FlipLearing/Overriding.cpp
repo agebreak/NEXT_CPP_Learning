@@ -30,19 +30,40 @@ void Overriding::Run()
 // 	yeonWoo.Dead();
 
 
-	Player		yeRim;
-	NPC			hyungJin;
-	Mob			yeonWoo;	
-	
-	Character party[3];
-	party[0] = yeRim;
-	party[1] = hyungJin;
-	party[2] = yeonWoo;
-	// 자식 클래스이기 때문에 가능.
+// 	Player*		yeRim = new Player();
+// 	NPC*		hyungJin = new NPC();
+// 	Mob*		yeonWoo = new Mob();	
+// 
+// 	yeRim->Dead();
+// 	hyungJin->Dead();
+// 	yeonWoo->Dead();	
+// 
+// 	std::vector<Character*> party;
+// 
+// 	party.push_back(yeRim);
+// 	party.push_back(hyungJin);
+// 	party.push_back(yeonWoo);
+// 
+// 
+// 	for (auto character : party)
+// 	{
+// 		character->Dead();
+// 	}
 
-	for (Character charac : party)
-	{
-		charac.Dead();
-	}	
+// 	std::vector<Character*> charList;
+// 
+// 	charList.push_back(new NPC);
+// 	charList.push_back(new Mob);
+// 	charList.push_back(new Player);
+// 
+// 	for (auto pChar : charList)
+// 	{
+// 		pChar->Dead();
+// 	}
+
+	Character* pMob = new Mob();
+	pMob->Dead();
+	
 
 }
+

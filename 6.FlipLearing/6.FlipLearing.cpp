@@ -6,10 +6,17 @@
 #include "Ship.h"
 #include "BattleShip.h"
 #include "Overriding.h"
+#include "Assert.h"
+#include "MemoryLeak.h"
+#include "Mob.h"
 
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	// 메모리 릭 체크, 프로그램 실행시 한번만 실행
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	
+
 	//FLString flString; 
 	//flString.Test2();
 
@@ -26,6 +33,12 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	Overriding overriding; 
 	overriding.Run();
+
+// 	MemoryLeak memoryLeak; 
+// 	memoryLeak.Test();
+
+// 	Mob* pMob = new Mob();
+// 	delete pMob;
 
 	getchar();
 	return 0;
